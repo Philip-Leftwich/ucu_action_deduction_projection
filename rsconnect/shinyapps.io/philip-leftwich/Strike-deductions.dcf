@@ -1,0 +1,12 @@
+name: Strike-deductions
+title: Strike-deductions
+username:
+account: philip-leftwich
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 8048788
+bundleId: 6750586
+url: https://philip-leftwich.shinyapps.io/Strike-deductions/
+when: 1674115114.81692
+asMultiple: FALSE
+asStatic: FALSE
