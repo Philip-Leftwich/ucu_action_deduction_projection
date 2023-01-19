@@ -39,8 +39,7 @@ ui <- dashboardPage(
 )
 ),
 
-footer = dashboardFooter(left = "Disclaimer: all figures are approximate and dependent on how your employer takes deductions (I have assumed 1/365 deductions per day of action). There will almost certainly be errors if you spot any please let me know.",
-right = "UCU UEA Branch")
+footer = dashboardFooter(left = "Disclaimer: All figures are approximate and dependent on how your employer takes deductions (I have assumed 1/365 deductions per day of action). There will almost certainly be errors if you spot any please let me know.")
 )
 
 
