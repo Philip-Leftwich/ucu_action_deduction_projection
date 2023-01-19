@@ -39,7 +39,7 @@ ui <- dashboardPage(
 )
 ),
 
-footer = dashboardFooter(left = "This app is for indicator purposes only, it should not be relied on for financial decision making - this was made in spare time by volunteers",
+footer = dashboardFooter(left = "Disclaimer: all figures are approximate and dependent on how your employer takes deductions (I have assumed 1/365 deductions per day of action). There will almost certainly be errors if you spot any please let me know.",
 right = "UCU UEA Branch")
 )
 
