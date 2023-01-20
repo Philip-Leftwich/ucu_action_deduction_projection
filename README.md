@@ -9,6 +9,9 @@ Inspired by reading [https://medium.com/@sarahcjoss/the-net-cost-of-striking-849
 
 *Disclaimer: all figures are approximate and dependent on how your employer takes deductions (I have assumed 1/365 deductions per day of action). Assuming there are no additional deductions for partial performance relating to Action Short of a Strike. There will almost certainly be errors if you spot any please let me know.*
 
+
+![](app_snapshot.png)
+
 ## Data
 
 Data on Tax codes, National Insurance contributions, Student loan repayment plans is taken from [The Salary Calculator](https://www.thesalarycalculator.co.uk/salary.php) and is correct as of January 2023. 
