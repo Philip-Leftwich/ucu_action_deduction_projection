@@ -10,7 +10,7 @@ Inspired by reading [https://medium.com/@sarahcjoss/the-net-cost-of-striking-849
 *Disclaimer: all figures are approximate and dependent on how your employer takes deductions (I have assumed 1/365 deductions per day of action). Assuming there are no additional deductions for partial performance relating to Action Short of a Strike. There will almost certainly be errors if you spot any please let me know.*
 
 
-![](app_snapshot.png)
+![Screencapture of shiny app - shows strike pay as top bar and standard take home as bottom bar](app_snapshot.png)
 
 ## Data
 
