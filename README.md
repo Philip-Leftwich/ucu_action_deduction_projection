@@ -5,7 +5,7 @@ Working out the impact of industrial action on take-home (net) pay can be compli
 
 This app allows you to input Gross salary, Tax codes, Hours relative to full-time equivalent (FTE), Student loan deductions (England only) and applications to the UCU fighting fund and see the impact on pay. 
 
-Inspired by reading [https://medium.com/@sarahcjoss/the-net-cost-of-striking-8493018ead3f]
+Inspired by reading https://medium.com/@sarahcjoss/the-net-cost-of-striking-8493018ead3f
 
 *Disclaimer: all figures are approximate and dependent on how your employer takes deductions (I have assumed 1/365 deductions per day of action). Assuming there are no additional deductions for partial performance relating to Action Short of a Strike. There will almost certainly be errors if you spot any please let me know.*
 
@@ -16,9 +16,9 @@ Inspired by reading [https://medium.com/@sarahcjoss/the-net-cost-of-striking-849
 
 Data on Tax codes, National Insurance contributions, Student loan repayment plans is taken from [The Salary Calculator](https://www.thesalarycalculator.co.uk/salary.php) and is correct as of January 2023. 
 
-HE Single Pay Spine information can be found here [https://www.ucu.org.uk/he_singlepayspine]
+HE Single Pay Spine information can be found [here](https://www.ucu.org.uk/he_singlepayspine)
 
-Pension contributions calculated at 9.8% [https://www.uss.co.uk/for-members/youre-a-new-joiner/what-youll-pay]
+[Pension contributions calculated at 9.8%](https://www.uss.co.uk/for-members/youre-a-new-joiner/what-youll-pay)
 
 Deductions for industrial action calculate at 1/365 per day of action. For calculations for those in part-time work - deductions for declared days of action are scored accordingly e.g working at 0.4FTE would result in each day of action being deducted at 1/146. 
 
