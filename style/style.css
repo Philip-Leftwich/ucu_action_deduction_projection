@@ -16,12 +16,9 @@ a:active {
 }
 
 body {
-    font-size: 16px;
+    font-size: 14px;
 }
 
-.help-block {
-    font-size: 16px !important;
-}
 
 .app_title {
     display: flex;
@@ -33,13 +30,13 @@ body {
     margin-bottom: 5px;
     background-color: #605ca8;
     color: white;
-    padding: 1%;
 }
 
 .footer_container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5%;
+    font-size: 8px;
     align-content: center;
     justify-content: center;
     align-items: start;
