@@ -1,4 +1,4 @@
-# libraries ----
+# Packages =====
 suppressPackageStartupMessages({
   library(shiny)
   library(shinydashboard)
@@ -7,15 +7,20 @@ suppressPackageStartupMessages({
 
 })
 
-# functions ----
+# functions import ======
 source("functions.R")
 
-# user interface ----
+# User interface =====
 
 
-## UI ----
-ui <- dashboardPage(
-#  skin = "purple",
+## UI =====
+ui <- 
+  
+  shiny::tagList( 
+    includeCSS(path = "style/style.css"),
+  
+  dashboardPage(
+  skin = "purple",
   dashboardHeader(title = "UCU strike deductions"),
   dashboardSidebar(disable = FALSE,
                    numericInput("gross_salary", "Enter Gross Salary at 1 FTE (pre-tax or pension deductions) - capped at grade point 51", 42155, min = 10000, max = 65578),
@@ -37,14 +42,24 @@ ui <- dashboardPage(
           p("")),
     
 )
+)
 ),
 
-footer = dashboardFooter(left = "Disclaimer: All figures are approximate and dependent on how your employer takes deductions (I have assumed 1/365 deductions per day of action). There will almost certainly be errors if you spot any please let me know.")
+tags$footer(
+  tags$div(
+    class = "footer_container", 
+    
+    includeHTML(path = "style/footer.html")
+  )
 )
+)
+  
 
 
 
-# server ----
+
+# server =====
+
 server <- function(input, output, session) {
   # reset values
   observeEvent(input$reset, {

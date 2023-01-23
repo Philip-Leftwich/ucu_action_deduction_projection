@@ -9,6 +9,9 @@ Inspired by reading [https://medium.com/@sarahcjoss/the-net-cost-of-striking-849
 
 *Disclaimer: all figures are approximate and dependent on how your employer takes deductions (I have assumed 1/365 deductions per day of action). Assuming there are no additional deductions for partial performance relating to Action Short of a Strike. There will almost certainly be errors if you spot any please let me know.*
 
+
+![Screencapture of shiny app - shows strike pay as top bar and standard take home as bottom bar](app_snapshot.png)
+
 ## Data
 
 Data on Tax codes, National Insurance contributions, Student loan repayment plans is taken from [The Salary Calculator](https://www.thesalarycalculator.co.uk/salary.php) and is correct as of January 2023. 
@@ -23,7 +26,7 @@ Deductions for industrial action calculate at 1/365 per day of action. For calcu
 ## Requirements
 
 ```
-R version 3.6.2
+R version 4.1.3
 
 ```
 
@@ -32,10 +35,10 @@ R version 3.6.2
 Available on CRAN
 
 ```
- [1] scales_1.1.1             forcats_0.5.1            stringr_1.4.0           
- [4] dplyr_1.0.6              purrr_0.3.4              readr_2.1.1             
- [7] tidyr_1.1.3              tibble_3.1.1             ggplot2_3.3.6           
-[10] tidyverse_1.3.1          shinydashboardPlus_2.0.3 shinycssloaders_1.0.0   
+ [1] scales_1.2.1             forcats_0.5.2            stringr_1.4.1           
+ [4] dplyr_1.0.10             purrr_0.3.5              readr_2.1.3             
+ [7] tidyr_1.2.1              tibble_3.1.8             ggplot2_3.4.0           
+[10] tidyverse_1.3.2          shinydashboardPlus_2.0.3 shinycssloaders_1.0.0   
 [13] shinydashboard_0.7.2     shiny_1.7.1              extrafont_0.17  
 
 ```

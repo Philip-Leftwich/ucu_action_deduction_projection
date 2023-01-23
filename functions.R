@@ -1,12 +1,16 @@
+# Functions for UCU deductions Shiny app====
+## Based on UK tax and NI with current UCU pension contribution of 9.8%. Correct as of 18th January 2023====
+
+# Packages=====
 
 library(tidyverse)
 library(scales)
 
+#________________________=====
 
-# Based on UK tax and NI with current UCU pension contribution of 9.8%. Correct as of 18th January 2023
-#======================================
 
-#Set default conditions
+# Take home pay=====
+
 take_home_pay <- function(gross_salary, student_loan = "none", tax_code = 1275, fte = 1){
 
   # fte full-time-equivalent
@@ -44,12 +48,10 @@ return(take_home)
 
 }
 
+#____________________________======
 
 
-
-#####
-
-# Strike deductions ===
+# Strike deductions ======
 
 strike_impact <- function(days_of_action, gross_salary, student_loan = FALSE, tax_code = 1275,fte = 1){
   
@@ -66,7 +68,7 @@ taxable_income <- gross_salary - pension_deduction - (tax_code*10)
 
 something <- gross_salary-pension_deduction
 
-#Plan 1 and 2 student loan deduction
+
 student_loan_deduction <- case_when(student_loan == "Plan 2" ~ (something - 27295)*0.09,
                                     student_loan == "Plan 1" ~ (something - 20195)*0.09,
                                     student_loan == "none" ~ 0,
@@ -93,9 +95,9 @@ return(take_home)
 }
 
 
-#==================
+#___________________======
 
-# fighting fund
+# Fighting fund =======
 
 fighting_fund <- function(gross_salary, days_of_action, fighting_fund = TRUE){
 
@@ -115,9 +117,10 @@ fighting_fund <- case_when(fighting_fund_days <=11 & fighting_fund_days > 0 ~ fi
 }
 
 
-#===============
+#______________________======
 
 
+# Figures=====
 
 plot_pay <- function(data){
   data %>% 
