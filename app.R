@@ -32,6 +32,7 @@ ui <-
                    actionButton("reset", "Reset")),
   dashboardBody(
     p("This app is designed to help calculate monthly take home pay with deductions from Industrial Action. 
+    \n It will work out take the take home pay for any given month that has strike deductions taken.
     \nInformation on pension deductions, Tax, NI and student loans is taken from ", 
       a("The Salary Calculator", href = "https://www.thesalarycalculator.co.uk/salary.php"), 
       ". \nDetails on ", a("the HE single pay spine can be found here", href = "https://www.ucu.org.uk/he_singlepayspine"),
