@@ -31,7 +31,7 @@ ui <-
                    checkboxInput("fighting_fund", "Fighting Fund application", value = FALSE, width = NULL),
                    actionButton("reset", "Reset")),
   dashboardBody(
-    p("This app is designed to help calculate take home pay with deductions from Industrial Action. 
+    p("This app is designed to help calculate monthly take home pay with deductions from Industrial Action. 
     \nInformation on pension deductions, Tax, NI and student loans is taken from ", 
       a("The Salary Calculator", href = "https://www.thesalarycalculator.co.uk/salary.php"), 
       ". \nDetails on ", a("the HE single pay spine can be found here", href = "https://www.ucu.org.uk/he_singlepayspine"),
