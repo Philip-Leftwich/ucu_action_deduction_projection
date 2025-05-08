@@ -111,7 +111,7 @@ return(take_home)
 fighting_fund <- function(gross_salary, days_of_action, fighting_fund = TRUE){
 
 fighting_fund_days <- if_else(fighting_fund == TRUE,
-                              days_of_action-1,
+                              days_of_action-2,
                               0)
 
 fighting_fund_daily_amount <- if_else(gross_salary <= 30000,
