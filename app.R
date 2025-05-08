@@ -36,7 +36,7 @@ ui <-
     \nInformation on pension deductions, Tax, NI and student loans is taken from ", 
       a("The Salary Calculator", href = "https://www.thesalarycalculator.co.uk/salary.php"), 
       ". \nDetails on ", a("the HE single pay spine can be found here", href = "https://www.ucu.org.uk/he_singlepayspine"),
-      " . \nInformation correct as of January 2023. Originally inspired by", a("this blog post by sarahcjoss", href = "https://medium.com/@sarahcjoss/the-net-cost-of-striking-8493018ead3f")),
+      " . \nInformation correct as of May 2025. Originally inspired by", a("this blog post by sarahcjoss", href = "https://medium.com/@sarahcjoss/the-net-cost-of-striking-8493018ead3f")),
     tabsetPanel(
     tabPanel("Take home pay", 
              plotOutput("linebox",height = "700px") %>% withSpinner(color="#0dc5c1"), 
