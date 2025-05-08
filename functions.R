@@ -8,6 +8,13 @@ library(scales)
 
 #________________________=====
 
+# pension contribution
+
+pension <- 0.061
+student_loan_1 <- 26065
+student_loan_2 <- 28470
+NI_rate <- 0.08
+
 
 # Take home pay=====
 
@@ -16,8 +23,8 @@ take_home_pay <- function(gross_salary, student_loan = "none", tax_code = 1275, 
   # fte full-time-equivalent
 gross_salary <- gross_salary*fte
 
-#9.8% pension contribution        
-pension_deduction <- gross_salary*0.098
+# pension contribution        
+pension_deduction <- gross_salary*pension
 
 # turn tax code into tax contributions
 taxable_income <- gross_salary - pension_deduction - (tax_code*10)
@@ -25,18 +32,18 @@ taxable_income <- gross_salary - pension_deduction - (tax_code*10)
 something <- gross_salary-pension_deduction
 
 #Plan 1 and 2 student loan deduction
-student_loan_deduction <- case_when(student_loan == "Plan 2" ~ (something - 27295)*0.09,
-                                    student_loan == "Plan 1" ~ (something - 20195)*0.09,
+student_loan_deduction <- case_when(student_loan == "Plan 2" ~ (something - student_loan_2)*0.09,
+                                    student_loan == "Plan 1" ~ (something - student_loan_1)*0.09,
                                     student_loan == "none" ~ 0,
                                     TRUE ~ 0)
 # Graded NI contributions
 NI <- 52*if_else(
   (something/52) <= 967, 
-  (((something/52)-242)*.12),
-  (724.99 * .12)+(((something/52)-967)*0.02)
+  (((something/52)-242)*NI_rate),
+  (725 * NI_rate)+(((something/52)-967)*0.02)
   ) 
   
-# Basic and Higehr rate tax
+# Basic and Higher rate tax
 tax <- if_else(taxable_income <= 37700, 
                taxable_income*0.2,
                ((taxable_income-37700)*0.4) + (37700*0.2))
@@ -62,26 +69,28 @@ gross_salary <- gross_salary*fte
 
 gross_salary <- gross_salary -(strike_day*days_of_action)
 
-pension_deduction <- gross_salary*0.098
+pension_deduction <- gross_salary*pension
 
 taxable_income <- gross_salary - pension_deduction - (tax_code*10)
 
 something <- gross_salary-pension_deduction
 
 
-student_loan_deduction <- case_when(student_loan == "Plan 2" ~ (something - 27295)*0.09,
-                                    student_loan == "Plan 1" ~ (something - 20195)*0.09,
+student_loan_deduction <- case_when(student_loan == "Plan 2" ~ (something - student_loan_2)*0.09,
+                                    student_loan == "Plan 1" ~ (something - student_loan_1)*0.09,
                                     student_loan == "none" ~ 0,
                                     TRUE ~ 0)
 
 
 NI <- 52*if_else(
   (something/52) <= 967, 
-  (((something/52)-242)*.12),
-  (724.99 * .12)+(((something/52)-967)*0.02)
+  (((something/52)-242)*NI_rate),
+  (725 * NI_rate)+(((something/52)-967)*0.02)
 )  
 
 
+
+# Basic and Higher rate tax
 tax <- if_else(taxable_income <= 37700, 
                taxable_income*0.2,
                ((taxable_income-37700)*0.4) + (37700*0.2))
